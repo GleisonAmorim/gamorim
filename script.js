@@ -18,7 +18,7 @@ function enviarWhatsApp() {
     mensagemFormatada = encodeURIComponent(mensagemFormatada);
 
     // Monta o link do WhatsApp
-    var linkWhatsApp = "https://wa.me/" + numeroWhatsApp + "?text=" + mensagemFormatada;
+    var linkWhatsApp = "https://wa.me/55016991659459" + numeroWhatsApp + "?text=" + mensagemFormatada;
 
     // Abre o link no navegador para iniciar a conversa no WhatsApp
     window.open(linkWhatsApp, "_blank");
