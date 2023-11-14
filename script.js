@@ -9,25 +9,17 @@ function enviarWhatsApp() {
     var mensagem = document.getElementById("mensagem").value;
 
     // Monta a mensagem formatada com quebras de linha
-    var mensagemFormatada = "Nome: " + nome + "\nEmail: " + email + "\nAssunto: " + assunto + "\nMensagem: " + mensagem;
+    var mensagemFormatada = " Nome: " + nome + "\nEmail: " + email + "\nAssunto: " + assunto + "\n\n Mensagem: " + mensagem;
 
     // Substitui espaços em branco por caracteres mais amigáveis
     mensagemFormatada = mensagemFormatada.replace(/ /g, "");
 
-    // Codifica a mensagem para o formato de URI
-    mensagemFormatada = encodeURIComponent(mensagemFormatada);
-
     // Monta o link do WhatsApp
-    var linkWhatsApp = "https://wa.me/55016991659459" + numeroWhatsApp + "?text=" + mensagemFormatada;
+    var linkWhatsApp = "https://wa.me/" + numeroWhatsApp + "?text=" + encodeURIComponent(mensagemFormatada);
 
     // Abre o link no navegador para iniciar a conversa no WhatsApp
     window.open(linkWhatsApp, "_blank");
-    document.querySelector('a[href="#tipos-sites"]').addEventListener('click', function (e) {
-        e.preventDefault();
-        document.getElementById('tipos-sites').scrollIntoView({
-            behavior: 'smooth'
-        });
-    });
 
-
+    // Exibe um popup de confirmação
+    alert("Mensagem enviada para o WhatsApp!");
 }
