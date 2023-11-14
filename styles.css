@@ -233,6 +233,6 @@ button {
 
 @media only screen and (max-width: 600px) {
     #sobre img {
-        width: 80%; /* Aumenta a largura para dispositivos móveis */
+        width: 160%; /* Aumenta a largura para dispositivos móveis */
     }
 }
