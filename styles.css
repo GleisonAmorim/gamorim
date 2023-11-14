@@ -230,18 +230,18 @@ button:hover {
     background-color: #45a049;
 }
 
-#sobre img {
-    width: 100%;
-    /* Define a largura da imagem como 100% do contêiner pai */
-    height: auto;
-    /* Mantém a proporção original da imagem */
+#sobre-text-container {
+    max-width: 800px;
+    /* Ajuste conforme necessário */
+    margin: 0 auto;
+    /* Centraliza o container */
 }
 
+/* Adaptação para dispositivos móveis */
 @media only screen and (max-width: 600px) {
-    #sobre img {
-        width: 200%;
-        /* Define a largura da imagem como 100% da largura da tela */
-        height: auto;
-        /* Mantém a proporção original da imagem */
+    #sobre-text-container {
+        max-width: 100%;
+        padding: 0 20px;
+        /* Adiciona algum espaçamento interno para dispositivos móveis */
     }
 }
